@@ -389,16 +389,15 @@ actual repository.
 <div align="center">
 👨‍💻 Author
 Isa Abdul Kadri · B.Tech Computer Science
+
+  <P>
 - GitHub: https://github.com/isakadri
 - LinkedIn: https://www.linkedin.com/in/isa-kadri-767a6234b/
+</P>
 
-📄 License
-This is currently a portfolio/academic project. If you intend to
-distribute or reuse it publicly, add a license (for example, MIT) and
-include a LICENSE file.
 
-**Built to make campus placement workflows more organized and
-accessible.** 🚀
+
+
 
 
 <div align="center">
@@ -436,4 +435,8 @@ Making textbook resale easier for students.
 📄 License
 
 This project was developed for educational and portfolio purposes.
+
+
+**Built a  campus placement workflows more organized and
+accessible.** 🚀
 
