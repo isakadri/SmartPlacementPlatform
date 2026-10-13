@@ -2,7 +2,7 @@
 
 # 🚀 Smart Placement Platform
 
-### An AI-Powered Campus Placement Management System
+### An AI-Powered Campus Placement Platform
 
 <p>
   <strong>Discover • Apply • Manage • Prepare • Get Placed</strong>
