@@ -385,6 +385,8 @@ smart-placement-platform/
 ```
 This is an illustrative layout; keep folder names aligned with your
 actual repository.
+
+<div align="center">
 👨‍💻 Author
 Isa Abdul Kadri · B.Tech Computer Science
 - GitHub: https://github.com/YOUR-USERNAME
@@ -398,3 +400,5 @@ include a LICENSE file.
 **Built to make campus placement workflows more organized and
 accessible.** 🚀
 :::
+
+</div>
