@@ -58,6 +58,8 @@ giving students and recruiters a single, role-aware platform.
 </td>
 </tr>
 </table>
+
+  ```
 🧰 Technology Stack
   Layer         Technologies
   Frontend      React, Vite, JavaScript, CSS
@@ -66,6 +68,7 @@ giving students and recruiters a single, role-aware platform.
   Database      MySQL
   Build tools   Maven, npm
   API testing   Postman (recommended)
+```
 🏗️ Architecture
 ```mermaid
 flowchart LR
@@ -76,6 +79,8 @@ flowchart LR
     SVC --> REPO[Repository / Data Access]
     REPO --> DB[(MySQL Database)]
     SVC --> AI[AI Provider API]
+
+
 ```
 Typical user journey
 ```mermaid
@@ -115,7 +120,7 @@ this:
 Screenshot placeholders are suggestions, not fabricated images. Commit
 screenshots of the real running application to make this section
 visual.
-
+```
 ⚙️ Getting Started
 Prerequisites
 - JDK compatible with the backend's configured Java version
@@ -128,6 +133,9 @@ git clone https://github.com/YOUR-USERNAME/smart-placement-platform.git
 cd smart-placement-platform
 Replace YOUR-USERNAME with your GitHub username and use your actual
 repository URL.
+```
+
+```
 2. Configure MySQL
 Create the database:
 CREATE DATABASE placement_platform;
@@ -136,6 +144,8 @@ and password. Example settings (adjust to your existing configuration):
 spring.datasource.url=jdbc:mysql://localhost:3306/placement_platform
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
+```
+```
 3. Configure environment variables
 Configure database credentials and any AI-provider key required by
 interview features. Never commit real credentials or API keys.
@@ -144,14 +154,19 @@ DB_PASSWORD=your_mysql_password
 GEMINI_API_KEY=your_ai_provider_key
 Use the exact environment variable/property names expected by your
 backend configuration.
+```
 4. Run the backend
+```
 From the backend directory, if the Maven Wrapper is included:
 Windows PowerShell
 .\mvnw.cmd spring-boot:run
 Or with Maven installed
 mvn spring-boot:run
 The API commonly runs at http://localhost:8080.
-5. Run the frontend
+```
+
+```
+6. Run the frontend
 In another terminal:
 cd frontend
 npm install
@@ -159,7 +174,7 @@ npm run dev
 Open the local URL printed by Vite (often http://localhost:5173).
 If your repository uses different folder names or scripts, follow the
 actual project structure and package.json.
-
+```
 🔑 Authentication and Roles
 ```
 After login, the frontend stores a JWT and sends it with protected API
