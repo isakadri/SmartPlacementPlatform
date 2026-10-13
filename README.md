@@ -95,19 +95,162 @@ flowchart TD
     I --> J[Update Application Status]
     C -->|ADMIN| K[Admin Operations]
 ```
-🖼️ Screenshots
-Add screenshots from your running application to the repository so
-visitors can see the actual UI. Suggested files:
+🖼️Project Structure :
 
 ```
-docs/
-└── screenshots/
-    ├── login.png
-    ├── student-dashboard.png
-    ├── jobs.png
-    ├── resume-builder.png
-    ├── interview-coach.png
-    └── recruiter-dashboard.png
+smart-placement-platform/
+│
+├── README.md
+├── .gitignore
+├── .gitattributes
+├── LICENSE
+├── .env.example
+│
+├── docs/
+│   ├── architecture.md
+│   ├── database-design.md
+│   └── screenshots/
+│       ├── login.png
+│       ├── student-dashboard.png
+│       ├── recruiter-dashboard.png
+│       ├── jobs.png
+│       └── interview-coach.png
+│
+├── frontend/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── eslint.config.js
+│   ├── .env.example
+│   │
+│   ├── public/
+│   │   ├── favicon.svg
+│   │   └── images/
+│   │
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       ├── App.css
+│       ├── index.css
+│       │
+│       ├── assets/
+│       │   └── images/
+│       │
+│       ├── components/
+│       │   ├── Navbar.jsx
+│       │   ├── Sidebar.jsx
+│       │   ├── ProtectedRoute.jsx
+│       │   ├── Loading.jsx
+│       │   └── ErrorMessage.jsx
+│       │
+│       ├── pages/
+│       │   ├── Login.jsx
+│       │   ├── Register.jsx
+│       │   ├── StudentDashboard.jsx
+│       │   ├── RecruiterDashboard.jsx
+│       │   ├── AdminDashboard.jsx
+│       │   ├── StudentProfile.jsx
+│       │   ├── Jobs.jsx
+│       │   ├── JobDetails.jsx
+│       │   ├── Applications.jsx
+│       │   ├── ResumeBuilder.jsx
+│       │   ├── JobRecommendations.jsx
+│       │   └── InterviewCoach.jsx
+│       │
+│       ├── services/
+│       │   ├── api.js
+│       │   ├── authService.js
+│       │   ├── jobService.js
+│       │   ├── applicationService.js
+│       │   └── interviewService.js
+│       │
+│       ├── context/
+│       │   └── AuthContext.jsx
+│       │
+│       ├── hooks/
+│       │   └── useAuth.js
+│       │
+│       └── utils/
+│           ├── constants.js
+│           └── validators.js
+│
+├── backend/
+│   ├── pom.xml
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── .mvn/
+│   │   └── wrapper/
+│   │
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── smart_placement_platform/
+│       │   │       └── backend/
+│       │   │           ├── PlacementApplication.java
+│       │   │           │
+│       │   │           ├── config/
+│       │   │           │   └── SecurityConfig.java
+│       │   │           │
+│       │   │           ├── security/
+│       │   │           │   ├── JwtAuthenticationFilter.java
+│       │   │           │   ├── JwtService.java
+│       │   │           │   └── CustomUserDetailsService.java
+│       │   │           │
+│       │   │           ├── auth/
+│       │   │           │   ├── AuthController.java
+│       │   │           │   ├── AuthService.java
+│       │   │           │   └── dto/
+│       │   │           │
+│       │   │           ├── student/
+│       │   │           │   ├── StudentController.java
+│       │   │           │   ├── StudentService.java
+│       │   │           │   ├── StudentRepository.java
+│       │   │           │   ├── StudentProfile.java
+│       │   │           │   └── dto/
+│       │   │           │
+│       │   │           ├── recruiter/
+│       │   │           │   ├── RecruiterController.java
+│       │   │           │   ├── RecruiterService.java
+│       │   │           │   ├── RecruiterRepository.java
+│       │   │           │   └── dto/
+│       │   │           │
+│       │   │           ├── job/
+│       │   │           │   ├── JobController.java
+│       │   │           │   ├── JobService.java
+│       │   │           │   ├── JobRepository.java
+│       │   │           │   ├── Job.java
+│       │   │           │   └── dto/
+│       │   │           │
+│       │   │           ├── application/
+│       │   │           │   ├── ApplicationController.java
+│       │   │           │   ├── ApplicationService.java
+│       │   │           │   ├── ApplicationRepository.java
+│       │   │           │   └── JobApplication.java
+│       │   │           │
+│       │   │           ├── resume/
+│       │   │           ├── recommendation/
+│       │   │           ├── interview/
+│       │   │           │   ├── InterviewController.java
+│       │   │           │   └── InterviewService.java
+│       │   │           │
+│       │   │           ├── user/
+│       │   │           │   ├── User.java
+│       │   │           │   └── UserRepository.java
+│       │   │           │
+│       │   │           └── exception/
+│       │   │
+│       │   └── resources/
+│       │       ├── application.properties
+│       │       ├── application-example.properties
+│       │       └── static/
+│       │
+│       └── test/
+│           └── java/
+│
+└── database/
+    ├── schema.sql
+    └── sample-data.sql
 ```
     
 Once you add those real screenshots, display them in the README like
