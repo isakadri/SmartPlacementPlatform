@@ -429,7 +429,7 @@ If you find this project useful, consider giving the repository a ⭐.
 
 <div align="center">
 
-📚 CampusBook Exchange
+🗺️ Smart placement Platform
 
 Making textbook resale easier for students.
 
