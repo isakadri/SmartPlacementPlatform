@@ -1,74 +1,182 @@
+<div align="center">
+
 # 🚀 Smart Placement Platform
 
-### An AI-powered placement management platform connecting students, recruiters, and administrators.
+### An AI-Powered Campus Placement Management System
 
-![Java](https://img.shields.io/badge/Java-Spring%20Boot-orange?style=for-the-badge&logo=openjdk&logoColor=white)
-![React](https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Security](https://img.shields.io/badge/Security-JWT%20%2B%20Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
+<p>
+  <strong>Discover • Apply • Manage • Prepare • Get Placed</strong>
+</p>
 
-**Discover opportunities · Manage applications · Prepare for
-interviews**
-:::📌 Overview
-Smart Placement Platform is a Java Full Stack web application
-designed to organize the campus placement journey in one place. Students
-can maintain profiles, explore eligible job opportunities, apply for
-jobs, and prepare for interviews. Recruiters can publish job openings
-and manage applications, while administrators can oversee platform
-access.
-The application uses a React + Vite frontend, a Spring Boot REST
-API, and a MySQL database. Authentication uses JWT, and
-passwords are protected with BCrypt.
-💡 Project goal: Make placement activities easier to track by
-giving students and recruiters a single, role-aware platform.
+<p>
+  <img src="https://img.shields.io/badge/Java-Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
+  <img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/Security-JWT%20%2B%20Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white">
+  <img src="https://img.shields.io/badge/Build-Maven%20%7C%20npm-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
+</p>
 
-✨ Features
-<table>
-<tr>
-<td width="50%">
-👨‍🎓 Student Workspace
-- Student profile with education, CGPA, skills, and graduation details
+<p>
+  <a href="#-features">Features</a> •
+  <a href="#-screenshots">Screenshots</a> •
+  <a href="#-architecture">Architecture</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-roadmap">Roadmap</a>
+</p>
+
+</div>
+
+---
+
+## 📖 About The Project
+
+**Smart Placement Platform** is a Java Full Stack web application that organizes the entire campus placement journey in one place.
+
+Students can build profiles, explore eligible jobs, apply, track applications, build resumes and practice interviews. Recruiters can publish openings and manage applicants. Administrators oversee platform access.
+
+The application uses a **React + Vite** frontend, a **Spring Boot REST API**, and a **MySQL** database. Authentication is handled with **JWT**, and passwords are protected with **BCrypt**.
+
+---
+
+## 🎯 Problem Statement
+
+Campus placements are often managed through scattered spreadsheets, emails and messaging groups. Students miss opportunities they are eligible for, recruiters struggle to filter candidates, and nobody has a single view of application status.
+
+Interview preparation is also disconnected from the placement process itself.
+
+---
+
+## 💡 Solution
+
+Smart Placement Platform provides one role-aware platform where every participant has a dedicated workspace.
+
+```text
+Student                    Recruiter                  Admin
+  │                           │                         │
+  ├── Build Profile           ├── Company Profile       ├── Manage Users
+  ├── Browse Jobs             ├── Post Jobs             └── Platform Oversight
+  ├── Apply                   ├── Review Applicants
+  ├── Track Status            └── Update Status
+  ├── Resume Builder
+  └── AI Interview Coach
+            │                           │
+            └────────────┬──────────────┘
+                         ▼
+              Smart Placement Platform
+```
+
+---
+
+## ✨ Features
+
+### 👨‍🎓 Student Workspace
+
+- Profile with education, CGPA, skills and graduation details
 - Browse jobs and check eligibility
 - Apply for jobs and track application status
 - Resume builder and resume-to-job matching
 - Job recommendations based on profile information
-</td>
-<td width="50%">
-🏢 Recruiter Workspace
-- Recruiter/company profile
+
+### 🏢 Recruiter Workspace
+
+- Recruiter / company profile
 - Post and manage job openings
 - Review applications and candidate information
-- Support a student-to-recruiter placement workflow
-</td>
-</tr>
-<tr>
-<td width="50%">
-🤖 AI Interview Assistance
+- Update application status
+
+### 🤖 AI Interview Assistance
+
 - Generate interview practice questions
 - Practice Java Full Stack topics
-- AI chat-style interview coach where configured
-</td>
-<td width="50%">
-🔐 Security
+- AI chat-style interview coach (requires an AI provider key)
+
+### 🔐 Authentication & Security
+
 - JWT-based authentication
 - BCrypt password hashing
 - Role-Based Access Control (RBAC)
-- Separate access for STUDENT, RECRUITER, and ADMIN
-</td>
-</tr>
-</table>
+- Separate access for `STUDENT`, `RECRUITER` and `ADMIN`
 
-  ```
-🧰 Technology Stack
-  Layer         Technologies
-  Frontend      React, Vite, JavaScript, CSS
-  Backend       Java, Spring Boot, REST APIs
-  Security      Spring Security, JWT, BCrypt, RBAC
-  Database      MySQL
-  Build tools   Maven, npm
-  API testing   Postman (recommended)
+### Application Status Workflow
+
+```text
+Student
+  │
+  │ Apply for Job
+  ▼
+APPLIED
+  │
+  ▼
+Recruiter Reviews
+  │
+  ├───────────────┐
+  ▼               ▼
+SHORTLISTED     REJECTED
+  │
+  ▼
+SELECTED
 ```
-🏗️ Architecture
+
+> ⚠️ Adjust the status names above to match the exact values used in your backend.
+
+---
+
+## 👥 Roles & Access
+
+| Role | Intended Access |
+|------|-----------------|
+| 👨‍🎓 `STUDENT` | Profile, job discovery, applications, resume tools, interview practice |
+| 🏢 `RECRUITER` | Recruiter profile, job posting, applicant management |
+| 🛡️ `ADMIN` | Administrative operations and platform oversight |
+
+RBAC is enforced by the backend. Hiding a button in the frontend is not security.
+
+---
+
+## 📸 Screenshots
+
+Add real screenshots of the running application to `docs/screenshots/` using the filenames below.
+
+### 🔐 Login
+
+<img src="docs/screenshots/login.png" alt="Login" width="900">
+
+### 📊 Student Dashboard
+
+<img src="docs/screenshots/student-dashboard.png" alt="Student Dashboard" width="900">
+
+### 🏢 Recruiter Dashboard
+
+<img src="docs/screenshots/recruiter-dashboard.png" alt="Recruiter Dashboard" width="900">
+
+### 💼 Job Listings
+
+<img src="docs/screenshots/jobs.png" alt="Job Listings" width="900">
+
+### 🤖 AI Interview Coach
+
+<img src="docs/screenshots/interview-coach.png" alt="AI Interview Coach" width="900">
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|-------|--------------|
+| 🎨 Frontend | React, Vite, JavaScript, CSS |
+| ⚙️ Backend | Java, Spring Boot, REST APIs |
+| 🔐 Security | Spring Security, JWT, BCrypt, RBAC |
+| 🐬 Database | MySQL |
+| 🤖 AI | External AI provider API (Gemini key configurable) |
+| 📦 Build Tools | Maven, npm |
+| 🧪 API Testing | Postman |
+
+---
+
+## 🏗️ Architecture
+
+The backend follows a layered architecture, and the frontend talks to it over HTTP/JSON with a JWT.
+
 ```mermaid
 flowchart LR
     A[Student / Recruiter / Admin] --> UI[React + Vite UI]
@@ -78,10 +186,32 @@ flowchart LR
     SVC --> REPO[Repository / Data Access]
     REPO --> DB[(MySQL Database)]
     SVC --> AI[AI Provider API]
-
-
 ```
-Typical user journey
+
+### Request Flow
+
+```text
+React Page
+ ↓
+Service (api.js)
+ ↓
+Controller
+ ↓
+Service Layer
+ ↓
+Repository (JPA)
+ ↓
+MySQL
+ ↓
+Service Layer
+ ↓
+Controller (JSON)
+ ↓
+React Page
+```
+
+### Typical User Journey
+
 ```mermaid
 flowchart TD
     A[Register or Login] --> B[JWT Authentication]
@@ -95,14 +225,16 @@ flowchart TD
     I --> J[Update Application Status]
     C -->|ADMIN| K[Admin Operations]
 ```
-🖼️Project Structure :
 
-```
+---
+
+## 📂 Project Structure
+
+```text
 smart-placement-platform/
 │
 ├── README.md
 ├── .gitignore
-├── .gitattributes
 ├── LICENSE
 ├── .env.example
 │
@@ -118,32 +250,19 @@ smart-placement-platform/
 │
 ├── frontend/
 │   ├── package.json
-│   ├── package-lock.json
 │   ├── index.html
 │   ├── vite.config.js
-│   ├── eslint.config.js
 │   ├── .env.example
-│   │
 │   ├── public/
-│   │   ├── favicon.svg
-│   │   └── images/
-│   │
 │   └── src/
 │       ├── main.jsx
 │       ├── App.jsx
-│       ├── App.css
-│       ├── index.css
-│       │
-│       ├── assets/
-│       │   └── images/
-│       │
 │       ├── components/
 │       │   ├── Navbar.jsx
 │       │   ├── Sidebar.jsx
 │       │   ├── ProtectedRoute.jsx
 │       │   ├── Loading.jsx
 │       │   └── ErrorMessage.jsx
-│       │
 │       ├── pages/
 │       │   ├── Login.jsx
 │       │   ├── Register.jsx
@@ -157,289 +276,338 @@ smart-placement-platform/
 │       │   ├── ResumeBuilder.jsx
 │       │   ├── JobRecommendations.jsx
 │       │   └── InterviewCoach.jsx
-│       │
 │       ├── services/
 │       │   ├── api.js
 │       │   ├── authService.js
 │       │   ├── jobService.js
 │       │   ├── applicationService.js
 │       │   └── interviewService.js
-│       │
 │       ├── context/
 │       │   └── AuthContext.jsx
-│       │
 │       ├── hooks/
 │       │   └── useAuth.js
-│       │
 │       └── utils/
 │           ├── constants.js
 │           └── validators.js
 │
 ├── backend/
 │   ├── pom.xml
-│   ├── mvnw
-│   ├── mvnw.cmd
-│   ├── .mvn/
-│   │   └── wrapper/
-│   │
-│   └── src/
-│       ├── main/
-│       │   ├── java/
-│       │   │   └── smart_placement_platform/
-│       │   │       └── backend/
-│       │   │           ├── PlacementApplication.java
-│       │   │           │
-│       │   │           ├── config/
-│       │   │           │   └── SecurityConfig.java
-│       │   │           │
-│       │   │           ├── security/
-│       │   │           │   ├── JwtAuthenticationFilter.java
-│       │   │           │   ├── JwtService.java
-│       │   │           │   └── CustomUserDetailsService.java
-│       │   │           │
-│       │   │           ├── auth/
-│       │   │           │   ├── AuthController.java
-│       │   │           │   ├── AuthService.java
-│       │   │           │   └── dto/
-│       │   │           │
-│       │   │           ├── student/
-│       │   │           │   ├── StudentController.java
-│       │   │           │   ├── StudentService.java
-│       │   │           │   ├── StudentRepository.java
-│       │   │           │   ├── StudentProfile.java
-│       │   │           │   └── dto/
-│       │   │           │
-│       │   │           ├── recruiter/
-│       │   │           │   ├── RecruiterController.java
-│       │   │           │   ├── RecruiterService.java
-│       │   │           │   ├── RecruiterRepository.java
-│       │   │           │   └── dto/
-│       │   │           │
-│       │   │           ├── job/
-│       │   │           │   ├── JobController.java
-│       │   │           │   ├── JobService.java
-│       │   │           │   ├── JobRepository.java
-│       │   │           │   ├── Job.java
-│       │   │           │   └── dto/
-│       │   │           │
-│       │   │           ├── application/
-│       │   │           │   ├── ApplicationController.java
-│       │   │           │   ├── ApplicationService.java
-│       │   │           │   ├── ApplicationRepository.java
-│       │   │           │   └── JobApplication.java
-│       │   │           │
-│       │   │           ├── resume/
-│       │   │           ├── recommendation/
-│       │   │           ├── interview/
-│       │   │           │   ├── InterviewController.java
-│       │   │           │   └── InterviewService.java
-│       │   │           │
-│       │   │           ├── user/
-│       │   │           │   ├── User.java
-│       │   │           │   └── UserRepository.java
-│       │   │           │
-│       │   │           └── exception/
-│       │   │
-│       │   └── resources/
-│       │       ├── application.properties
-│       │       ├── application-example.properties
-│       │       └── static/
-│       │
-│       └── test/
-│           └── java/
+│   ├── mvnw / mvnw.cmd
+│   └── src/main/
+│       ├── java/smart_placement_platform/backend/
+│       │   ├── PlacementApplication.java
+│       │   ├── config/          → SecurityConfig
+│       │   ├── security/        → JwtAuthenticationFilter, JwtService,
+│       │   │                      CustomUserDetailsService
+│       │   ├── auth/            → AuthController, AuthService, dto/
+│       │   ├── student/         → Controller, Service, Repository, StudentProfile
+│       │   ├── recruiter/       → Controller, Service, Repository
+│       │   ├── job/             → Controller, Service, Repository, Job
+│       │   ├── application/     → Controller, Service, Repository, JobApplication
+│       │   ├── resume/
+│       │   ├── recommendation/
+│       │   ├── interview/       → InterviewController, InterviewService
+│       │   ├── user/            → User, UserRepository
+│       │   └── exception/
+│       └── resources/
+│           ├── application.properties
+│           └── application-example.properties
 │
 └── database/
     ├── schema.sql
     └── sample-data.sql
 ```
-    
-Once you add those real screenshots, display them in the README like
-this:
-![Login screen](docs/screenshots/login.png)
-![Student dashboard](docs/screenshots/student-dashboard.png)
-![Job listings](docs/screenshots/jobs.png)
-![AI interview coach](docs/screenshots/interview-coach.png)
-Screenshot placeholders are suggestions, not fabricated images. Commit
-screenshots of the real running application to make this section
-visual.
+
+---
+
+## 🗄️ Database Design
+
+The project uses MySQL as its relational database.
+
+```sql
+CREATE DATABASE placement_platform;
 ```
-⚙️ Getting Started
-Prerequisites
+
+### Core Entities
+
+```text
+┌───────────────┐
+│     users     │  (STUDENT / RECRUITER / ADMIN)
+└───────┬───────┘
+        │
+   ┌────┴─────────────┐
+   ▼                  ▼
+┌──────────────┐  ┌──────────────┐
+│student_profile│  │  recruiter   │
+└──────┬───────┘  └──────┬───────┘
+       │                 │ posts
+       │                 ▼
+       │          ┌──────────────┐
+       │          │     jobs     │
+       │          └──────┬───────┘
+       │                 │
+       └──────┬──────────┘
+              ▼
+     ┌──────────────────┐
+     │ job_applications │
+     └──────────────────┘
+```
+
+| Entity | Purpose |
+|--------|---------|
+| `users` | Login credentials and role |
+| `student_profile` | Education, CGPA, skills, graduation details |
+| `recruiter` | Recruiter / company information |
+| `jobs` | Job openings posted by recruiters |
+| `job_applications` | Student applications and their status |
+
+> Table names are illustrative. Match them to your `schema.sql`.
+
+---
+
+## 🔐 Security
+
+### Password Hashing
+
+Passwords are hashed with BCrypt before storage. Plain-text passwords are never saved.
+
+### JWT Authentication
+
+```text
+          HTTP Request + Bearer Token
+                      │
+                      ▼
+           ┌─────────────────────┐
+           │ JwtAuthenticationFilter │
+           └──────────┬──────────┘
+                      │
+                Valid Token?
+                 /        \
+               YES         NO
+                │           │
+                ▼           ▼
+        Role Check      401 Unauthorized
+                │
+        Allowed for Role?
+           /        \
+         YES         NO
+          │           │
+          ▼           ▼
+     Controller   403 Forbidden
+```
+
+### Security Notes
+
+- Never commit database passwords, API keys, JWT secrets or real user data
+- Store secrets in environment variables or untracked local config
+- Validate requests and enforce authorization on the backend
+- For production, configure HTTPS, CORS, logging and secure secret management
+- AI API quotas and rate limits depend on the provider and plan
+
+---
+
+## ⚙️ Installation
+
+### Prerequisites
+
 - JDK compatible with the backend's configured Java version
 - Node.js and npm
 - MySQL Server
 - Git
-- Maven, or the Maven Wrapper if included
-1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/smart-placement-platform.git
+- Maven (or the included Maven Wrapper)
+
+### 1. Clone The Repository
+
+```bash
+git clone https://github.com/isakadri/smart-placement-platform.git
 cd smart-placement-platform
-Replace YOUR-USERNAME with your GitHub username and use your actual
-repository URL.
 ```
 
-```
-2. Configure MySQL
-Create the database:
+### 2. Create Database
+
+```sql
 CREATE DATABASE placement_platform;
-Update the backend database configuration with your local MySQL username
-and password. Example settings (adjust to your existing configuration):
+```
+
+Then run `database/schema.sql` (and optionally `database/sample-data.sql`).
+
+### 3. Configure Environment Variables
+
+```env
+DB_USERNAME=your_mysql_username
+DB_PASSWORD=your_mysql_password
+GEMINI_API_KEY=your_ai_provider_key
+```
+
+Backend datasource configuration:
+
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/placement_platform
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
 ```
-```
-3. Configure environment variables
-Configure database credentials and any AI-provider key required by
-interview features. Never commit real credentials or API keys.
-DB_USERNAME=your_mysql_username
-DB_PASSWORD=your_mysql_password
-GEMINI_API_KEY=your_ai_provider_key
-Use the exact environment variable/property names expected by your
-backend configuration.
-```
-4. Run the backend
-```
-From the backend directory, if the Maven Wrapper is included:
-Windows PowerShell
+
+> Do not commit your real credentials or API keys to GitHub. Use the exact variable names your backend expects.
+
+### 4. Run The Backend
+
+```bash
+cd backend
+
+# Windows PowerShell
 .\mvnw.cmd spring-boot:run
-Or with Maven installed
+
+# macOS / Linux
+./mvnw spring-boot:run
+
+# Or with Maven installed
 mvn spring-boot:run
-The API commonly runs at http://localhost:8080.
 ```
 
-```
-6. Run the frontend
-In another terminal:
+The API typically runs at `http://localhost:8080`.
+
+### 5. Run The Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
-Open the local URL printed by Vite (often http://localhost:5173).
-If your repository uses different folder names or scripts, follow the
-actual project structure and package.json.
 ```
-🔑 Authentication and Roles
-```
-After login, the frontend stores a JWT and sends it with protected API
-requests.
-  Role                                Intended access
-  STUDENT                           Profile, job discovery,
-                                      applications, resume tools,
-                                      interview practice
-  RECRUITER                         Recruiter profile, job posting,
-                                      applicant management
-  ADMIN                             Administrative operations and
-                                  platform oversight
-```
-RBAC means API access is restricted according to the authenticated
-user's role. The backend must enforce these checks; hiding a frontend
-button alone is not security.
-🧪 Testing Checklist
-1. Register a student and log in.
-2. Complete the student profile.
-3. Browse jobs and check eligibility.
-4. Apply for a job and verify the application status.
-5. Log in as a recruiter and test job/application management.
-6. Verify users cannot access endpoints outside their assigned roles.
-7. Test AI interview features after configuring the provider key and
-   quota.
-Use Postman or another API client to test REST endpoints and
-authorization behavior.
-🔒 Security Notes
-- Never commit database passwords, API keys, JWT signing secrets, or
-  real user data.
-- Store secrets in environment variables or local untracked
-  configuration.
-- Use BCrypt for password hashing; never store plain-text passwords.
-- Validate requests on the backend and enforce authorization at the
-  API layer.
-- For production, configure HTTPS, CORS, logging, input validation,
-  and secure secret management.
-- AI API quotas and rate limits depend on the provider and plan.
-  
-🗺️ Roadmap
-- [ ] Placement analytics dashboard with charts
-- [ ] In-app notifications for application status changes
-- [ ] Email notifications for interview schedules
-- [ ] Application timeline and interview scheduling
-- [ ] More detailed AI resume feedback
-- [ ] Coding assessments for job applicants
-- [ ] Automated backend and frontend tests
-- [ ] Docker-based development and deployment
-- [ ] Production cloud deployment
-📁 Suggested Repository Layout
+
+Open the URL printed by Vite (usually `http://localhost:5173`).
+
+---
+
+## 🧪 Testing Flow
 
 ```text
-smart-placement-platform/
-├── backend/
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-├── frontend/
-│   ├── src/
-│   ├── package.json
-│   └── ...
-├── docs/
-│   └── screenshots/
-├── .gitignore
-└── README.md
+1. Register a Student
+      ↓
+2. Login
+      ↓
+3. Complete Student Profile
+      ↓
+4. Browse Jobs & Check Eligibility
+      ↓
+5. Apply for a Job
+      ↓
+6. Verify Application Status
+      ↓
+7. Login as Recruiter
+      ↓
+8. Post a Job / Review Applicants
+      ↓
+9. Update Application Status
+      ↓
+10. Verify Role Restrictions
+      ↓
+11. Test AI Interview Coach
 ```
-This is an illustrative layout; keep folder names aligned with your
-actual repository.
 
-👨‍💻 Author
+Use Postman or another API client to test REST endpoints and authorization behavior. Test AI features only after configuring the provider key.
+
+---
+
+## 🧩 Main Modules
+
+### Student Module
+
+Registration • Login • Profile • Job Search • Eligibility Check • Apply • Application Tracking • Resume Builder • Job Recommendations • Interview Coach
+
+### Recruiter Module
+
+Company Profile • Post Jobs • Manage Jobs • View Applicants • Update Application Status
+
+### Admin Module
+
+User Oversight • Platform Access Control
+
+---
+
+## 🎯 Project Objectives
+
+- Build a centralized placement platform for students and recruiters
+- Make job discovery and application tracking simple
+- Help students prepare for interviews using AI
+- Enforce role-based access across the whole stack
+- Practice building a production-style Java Full Stack application
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] 📊 Placement analytics dashboard with charts
+- [ ] 🔔 In-app notifications for application status changes
+- [ ] 📧 Email notifications for interview schedules
+- [ ] 🗓️ Application timeline and interview scheduling
+- [ ] 📝 More detailed AI resume feedback
+- [ ] 💻 Coding assessments for applicants
+- [ ] 🧪 Automated backend and frontend tests
+- [ ] 🐳 Docker-based development and deployment
+- [ ] ☁️ Production cloud deployment
+
+---
+
+## 🧠 Learning Outcomes
+
+This project provided practical experience with:
+
+- Spring Boot REST API development
+- Spring Security and JWT authentication
+- Role-Based Access Control (RBAC)
+- BCrypt password hashing
+- Layered architecture (Controller → Service → Repository)
+- MySQL schema design and relationships
+- React with Vite, routing and protected routes
+- Context API for authentication state
+- Frontend–backend integration with Axios/fetch
+- Integrating a third-party AI API
+- Environment-based secret management
+
+---
+
+## 👨‍💻 Author
+
 <div align="center">
 
-Isa Abdul Kadri · B.Tech Computer Science
-
-  <P>
-- GitHub: https://github.com/isakadri
-- LinkedIn: https://www.linkedin.com/in/isa-kadri-767a6234b/
-  </P>
-
-</div>
-
-
-
-
-
-
-<div align="center">
-
-Isa Abdul Kadri
+**Isa Abdul Kadri**
 
 B.Tech Computer Science Engineering
 Sandipani Technical Campus
 
 <p>
+  <a href="https://github.com/isakadri">GitHub</a> •
+  <a href="https://www.linkedin.com/in/isa-kadri-767a6234b/">LinkedIn</a>
+</p>
+
+<p>
   <code>Java</code>
-  <code>JSP</code>
-  <code>Servlets</code>
-  <code>JDBC</code>
+  <code>Spring Boot</code>
+  <code>React</code>
+  <code>Vite</code>
   <code>MySQL</code>
-  <code>HTML</code>
-  <code>CSS</code>
-  <code>Tomcat</code>
+  <code>JWT</code>
+  <code>REST API</code>
 </p>
 
 </div>
 
-⭐ Support
+---
+
+## ⭐ Support
 
 If you find this project useful, consider giving the repository a ⭐.
 
 <div align="center">
 
-🗺️ Smart placement Platform
+### 🚀 Smart Placement Platform
 
-Making textbook resale easier for students.
+*Making campus placement workflows more organized and accessible.*
 
 </div>
 
-📄 License
+---
+
+## 📄 License
 
 This project was developed for educational and portfolio purposes.
-
-
-**Built a  campus placement workflows more organized and
-accessible.** 🚀
-
