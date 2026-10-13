@@ -389,16 +389,51 @@ actual repository.
 <div align="center">
 👨‍💻 Author
 Isa Abdul Kadri · B.Tech Computer Science
-- GitHub: https://github.com/YOUR-USERNAME
-- LinkedIn: https://www.linkedin.com/in/YOUR-LINKEDIN-PROFILE/
-Replace these placeholders with your actual profile links.
+- GitHub: https://github.com/isakadri
+- LinkedIn: https://www.linkedin.com/in/isa-kadri-767a6234b/
+
 📄 License
 This is currently a portfolio/academic project. If you intend to
 distribute or reuse it publicly, add a license (for example, MIT) and
 include a LICENSE file.
-::: {align="center"}
+
 **Built to make campus placement workflows more organized and
 accessible.** 🚀
-:::
+
+
+<div align="center">
+
+Isa Abdul Kadri
+
+B.Tech Computer Science Engineering
+Sandipani Technical Campus
+
+<p>
+  <code>Java</code>
+  <code>JSP</code>
+  <code>Servlets</code>
+  <code>JDBC</code>
+  <code>MySQL</code>
+  <code>HTML</code>
+  <code>CSS</code>
+  <code>Tomcat</code>
+</p>
 
 </div>
+
+⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐.
+
+<div align="center">
+
+📚 CampusBook Exchange
+
+Making textbook resale easier for students.
+
+</div>
+
+📄 License
+
+This project was developed for educational and portfolio purposes.
+
