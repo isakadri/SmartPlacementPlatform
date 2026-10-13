@@ -94,6 +94,8 @@ flowchart TD
 🖼️ Screenshots
 Add screenshots from your running application to the repository so
 visitors can see the actual UI. Suggested files:
+
+```
 docs/
 └── screenshots/
     ├── login.png
@@ -102,6 +104,8 @@ docs/
     ├── resume-builder.png
     ├── interview-coach.png
     └── recruiter-dashboard.png
+```
+    
 Once you add those real screenshots, display them in the README like
 this:
 ![Login screen](docs/screenshots/login.png)
@@ -157,6 +161,7 @@ If your repository uses different folder names or scripts, follow the
 actual project structure and package.json.
 
 🔑 Authentication and Roles
+```
 After login, the frontend stores a JWT and sends it with protected API
 requests.
   Role                                Intended access
@@ -167,6 +172,7 @@ requests.
                                       applicant management
   ADMIN                             Administrative operations and
                                   platform oversight
+```
 RBAC means API access is restricted according to the authenticated
 user's role. The backend must enforce these checks; hiding a frontend
 button alone is not security.
@@ -192,6 +198,7 @@ authorization behavior.
 - For production, configure HTTPS, CORS, logging, input validation,
   and secure secret management.
 - AI API quotas and rate limits depend on the provider and plan.
+  
 🗺️ Roadmap
 - [ ] Placement analytics dashboard with charts
 - [ ] In-app notifications for application status changes
@@ -203,6 +210,8 @@ authorization behavior.
 - [ ] Docker-based development and deployment
 - [ ] Production cloud deployment
 📁 Suggested Repository Layout
+
+```text
 smart-placement-platform/
 ├── backend/
 │   ├── src/
@@ -216,6 +225,7 @@ smart-placement-platform/
 │   └── screenshots/
 ├── .gitignore
 └── README.md
+```
 This is an illustrative layout; keep folder names aligned with your
 actual repository.
 👨‍💻 Author
