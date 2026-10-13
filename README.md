@@ -1,4 +1,3 @@
-:: {align="center"}
 # 🚀 Smart Placement Platform
 
 ### An AI-powered placement management platform connecting students, recruiters, and administrators.
