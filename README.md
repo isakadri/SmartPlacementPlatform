@@ -386,14 +386,17 @@ smart-placement-platform/
 This is an illustrative layout; keep folder names aligned with your
 actual repository.
 
-<div align="center">
 👨‍💻 Author
+<div align="center">
+
 Isa Abdul Kadri · B.Tech Computer Science
 
   <P>
 - GitHub: https://github.com/isakadri
 - LinkedIn: https://www.linkedin.com/in/isa-kadri-767a6234b/
-</P>
+  </P>
+
+</div>
 
 
 
