@@ -143,19 +143,54 @@ Add real screenshots of the running application to `docs/screenshots/` using the
 
 ### 📊 Student Dashboard
 
-<img src="docs/screenshots/student-dashboard.png" alt="Student Dashboard" width="900">
+<img src="sc_img/std_dashBoard.png" alt="Student Dashboard" width="900">
 
-### 🏢 Recruiter Dashboard
+### 📊 Student JOB Recommendation
 
-<img src="docs/screenshots/recruiter-dashboard.png" alt="Recruiter Dashboard" width="900">
+<img src="sc_img/all_jobs.png" alt="Student Dashboard" width="900">
 
-### 💼 Job Listings
+### 📊 Student Application
 
-<img src="docs/screenshots/jobs.png" alt="Job Listings" width="900">
+<img src="sc_img/myapplication.png" alt="Student Dashboard" width="900">
+
+### 📊 Skill Match/Recommendation Score
+
+<img src="sc_img/viewJobs.png" alt="Student Dashboard" width="900">
+
+### 📊 Student Profile
+
+<img src="sc_img/myprofile.png" alt="Student Dashboard" width="900">
+
+### 📊 Resume Builder
+
+<img src="sc_img/resumeBuilder.png" alt="Student Dashboard" width="900">
 
 ### 🤖 AI Interview Coach
 
-<img src="docs/screenshots/interview-coach.png" alt="AI Interview Coach" width="900">
+<img src="sc_img/chatbot.png" alt="AI Interview Coach" width="900">
+
+### 🏢 Recruiter Dashboard
+
+<img src="sc_img/recruiterDashboard.png" alt="Recruiter Dashboard" width="900">
+
+
+### 🏢 Recruiter Profile
+
+<img src="sc_img/companyProfile.png" alt="Recruiter Dashboard" width="900">
+
+### 💼 Job Manager
+
+<img src="sc_img/manageJob.png" alt="Job Listings" width="900">
+
+### 💼 Apllication Status
+
+<img src="sc_img/ShortList.png" alt="Job Listings" width="900">
+
+### 💼 Job Listings Recruiter
+
+<img src="sc_img/JobControll.png" alt="Job Listings" width="900">
+
+
 
 ---
 
